@@ -1,0 +1,39 @@
+import { Text } from "./Text.styled"; 
+
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
+  return (
+    <ul>
+      <li>
+        <Text>
+          Good:<span>{good}</span>
+        </Text>
+      </li>
+      <li>
+        <Text>
+          Neutral:<span>{neutral}</span>
+        </Text>
+      </li>
+      <li>
+        <Text>
+          Bad:<span>{bad}</span>
+        </Text>
+      </li>
+      <li>
+        <Text>
+          Total:<span>{total}</span>
+        </Text>
+      </li>
+      <li>
+        <Text>
+          Positive feedback:<span>{positivePercentage} %</span>
+        </Text>
+      </li>
+    </ul>
+  );
+}
