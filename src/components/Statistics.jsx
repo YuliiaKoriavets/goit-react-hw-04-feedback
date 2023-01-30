@@ -1,4 +1,5 @@
-import { Text } from "./Text.styled"; 
+import PropTypes from 'prop-types';
+import { Text } from './Text.styled';
 
 export default function Statistics({
   good,
@@ -37,3 +38,11 @@ export default function Statistics({
     </ul>
   );
 }
+
+Statistics.propTypes = {
+  good: PropTypes.string.isRequired,
+  neutral: PropTypes.string.isRequired,
+  bad: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
